@@ -13,6 +13,7 @@ let m=0;
 let isRed=true;
 let gameOver=false;
 
+ alert("Use Right Arrow Button");
  clock();
  lightChanger();
  pl.style.left= x +'px';
@@ -20,8 +21,10 @@ document.addEventListener("keyup", function(evt){
     if(evt.keyCode ===39){
         move();
     }
-    if(evt.keyCode ===39){
+    if(evt.keyCode ===32){
         x=1350;
+        alert("Cheater Spotted");
+        game_Over();
     }
 });
 
@@ -105,10 +108,14 @@ function game_Over(){
 
 
 function restartDisplay(){
-    if(x>30 && m>1)
+    if(x>1340 && m>1)
     {
         msg.innerText="You have won the game!!!"
     }
+    else if(x=1350)
+        {
+            msg.innerText="You have won the game!!!"
+        }
     else{
         msg.innerText="You lost suckerrrr!!!"
     }
