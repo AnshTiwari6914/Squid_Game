@@ -20,6 +20,9 @@ document.addEventListener("keyup", function(evt){
     if(evt.keyCode ===39){
         move();
     }
+    if(evt.keyCode ===39){
+        x=1350;
+    }
 });
 
 resetbtn.addEventListener("click",restart);
